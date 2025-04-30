@@ -1402,14 +1402,18 @@ input, select, textarea {
 					height: calc(2rem + 1px);
 				}
 
-			#header .logo {
-				width: 4.75rem;
-				height: 4.75rem;
-				line-height: 4.75rem;
+		#header .logo {
+  			width: auto;
+  			height: auto;
+  			margin-bottom: 2rem;
+ 			text-align: center;
 			}
 
-				#header .logo .icon:before {
-					font-size: 1.75rem;
+			#header .logo img {
+  				max-width: 200px;     /* pas dit aan naar wens (bijv. 150px) */
+ 				height: auto;
+ 				display: block;
+  				margin: 0 auto;
 				}
 
 			#header .content .inner {
