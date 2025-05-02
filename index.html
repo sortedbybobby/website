@@ -20,11 +20,18 @@
 
 	<body class="is-preload">
 
-		  <!-- Cookie-banner -->
-		  <div id="cookie-banner" style="position: fixed; bottom: 0; background: #f5f5f5; width: 100%; padding: 15px; text-align: center; z-index: 9999;">
-		    Deze website gebruikt cookies voor statistieken. 
-		    <button onclick="acceptCookies()">Accepteren</button>
+		<!-- Cookie-banner -->
+		<div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: #ffffff; border: 1px solid #ddd; padding: 16px 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 8px; max-width: 600px; margin: auto; z-index: 10000; display: flex; flex-direction: column; gap: 10px; font-family: sans-serif;">
+		  <div style="font-size: 16px; color: #333;">
+		    Deze website gebruikt cookies om bezoekstatistieken bij te houden met Google Analytics. Door op "Accepteren" te klikken geef je toestemming.
 		  </div>
+		  <div style="text-align: right;">
+		    <button onclick="acceptCookies()" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;">
+		      Accepteren
+		    </button>
+		  </div>
+		</div>
+
 		
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -441,32 +448,38 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		
-		  <!-- Cookie consent script -->
-		  <script>
-		    function loadAnalytics() {
-		      const script = document.createElement('script');
-		      script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; // Vervang met jouw ID
-		      script.async = true;
-		      document.head.appendChild(script);
+		<!-- Cookie consent script -->
+		<script>
+		  function loadAnalytics() {
+		    const script = document.createElement('script');
+		    script.src = "https://www.googletagmanager.com/gtag/js?id=G-JJMG7MECCE"; // Vervang dit met jouw eigen metings-ID
+		    script.async = true;
+		    document.head.appendChild(script);
 		
-		      window.dataLayer = window.dataLayer || [];
-		      function gtag(){dataLayer.push(arguments);}
-		      gtag('js', new Date());
-		      gtag('config', 'G-XXXXXXXXXX'); // En hier ook
-		    }
+		    window.dataLayer = window.dataLayer || [];
+		    function gtag() { dataLayer.push(arguments); }
+		    gtag('js', new Date());
+		    gtag('config', 'G-JJMG7MECCE'); // Vervang dit ook met jouw metings-ID
+		  }
 		
-		    function acceptCookies() {
+		  function acceptCookies() {
+		    try {
 		      localStorage.setItem("cookieConsent", "true");
-		      document.getElementById("cookie-banner").style.display = "none";
+		      const banner = document.getElementById("cookie-banner");
+		      if (banner) banner.style.display = "none";
 		      loadAnalytics();
+		    } catch (e) {
+		      console.error("Cookie toestemming kon niet worden opgeslagen:", e);
 		    }
+		  }
 		
-		    window.onload = function() {
-		      if (localStorage.getItem("cookieConsent") === "true") {
-		        loadAnalytics();
-		        document.getElementById("cookie-banner").style.display = "none";
-		      }
-		    };
-		  </script>
+		  window.addEventListener('DOMContentLoaded', function () {
+		    if (localStorage.getItem("cookieConsent") === "true") {
+		      loadAnalytics();
+		      const banner = document.getElementById("cookie-banner");
+		      if (banner) banner.style.display = "none";
+		    }
+		  });
+		</script>
 	</body>
 </html>
