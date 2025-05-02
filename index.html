@@ -21,17 +21,14 @@
 	<body class="is-preload">
 
 		<!-- Cookie-banner -->
-		<div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: #ffffff; border: 1px solid #ddd; padding: 16px 24px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-radius: 8px; max-width: 600px; margin: auto; z-index: 10000; display: flex; flex-direction: column; gap: 10px; font-family: sans-serif;">
-		  <div style="font-size: 16px; color: #333;">
-		    Deze website gebruikt cookies om bezoekstatistieken bij te houden met Google Analytics. Door op "Accepteren" te klikken geef je toestemming.
-		  </div>
-		  <div style="text-align: right;">
-		    <button onclick="acceptCookies()" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; font-size: 14px; cursor: pointer;">
-		      Accepteren
-		    </button>
-		  </div>
+		<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: rgba(27, 31, 34, 0.95); color: #ffffff; font-family: 'Source Sans Pro', sans-serif; padding: 1rem 2rem; z-index: 10000; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; text-align: center;">
+		  <p style="margin: 0; font-size: 0.9rem;">
+		    Deze website gebruikt cookies om statistieken bij te houden met Google Analytics.
+		  </p>
+		  <button onclick="acceptCookies()" class="button primary small" style="margin-top: 0.25rem;">
+		    Accepteren
+		  </button>
 		</div>
-
 		
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -452,14 +449,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<script>
 		  function loadAnalytics() {
 		    const script = document.createElement('script');
-		    script.src = "https://www.googletagmanager.com/gtag/js?id=G-JJMG7MECCE"; // Vervang dit met jouw eigen metings-ID
+		    script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; // Vervang dit
 		    script.async = true;
 		    document.head.appendChild(script);
 		
 		    window.dataLayer = window.dataLayer || [];
 		    function gtag() { dataLayer.push(arguments); }
 		    gtag('js', new Date());
-		    gtag('config', 'G-JJMG7MECCE'); // Vervang dit ook met jouw metings-ID
+		    gtag('config', 'G-XXXXXXXXXX'); // En hier ook
 		  }
 		
 		  function acceptCookies() {
@@ -481,5 +478,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		    }
 		  });
 		</script>
+		
 	</body>
 </html>
