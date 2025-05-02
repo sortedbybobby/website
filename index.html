@@ -7,19 +7,25 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 			
-			<!-- Google tag (gtag.js) -->
+		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-JJMG7MECCE"></script>
 		<script>
- 		window.dataLayer = window.dataLayer || [];
-  		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
+ 			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
 
-  gtag('config', 'G-JJMG7MECCE');
-</script>
+  			gtag('config', 'G-JJMG7MECCE');
+		</script>
 	</head>
 
 	<body class="is-preload">
 
+		  <!-- Cookie-banner -->
+		  <div id="cookie-banner" style="position: fixed; bottom: 0; background: #f5f5f5; width: 100%; padding: 15px; text-align: center; z-index: 9999;">
+		    Deze website gebruikt cookies voor statistieken. 
+		    <button onclick="acceptCookies()">Accepteren</button>
+		  </div>
+		
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -66,7 +72,7 @@
 								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
 								<p>Hi,</p>
 								<p>Mijn naam is Bobby!</p>
-								<p>Ik plan, organiseer en begeleid al bijna tweedecennia complexe processen in verschillende vormen van transport. Wat ik daarbij ontdekte, is dat dezelfde vaardigheden - structuur aanbrengen, overzicht creeren en beweging organiseren - niet alleen waardevol zijn in de logistiek. Deze skills zijn universeel: ze brengen rust, richting en resultaat, waar je ze ook toepast - thuis of op het werk.</p>
+								<p>Al 20 jaar lang plan, organiseer en begeleid ik complexe processen binnen transport en logistiek, wat ik daarbij ontdekte, is dat dezelfde vaardigheden - structuur aanbrengen, overzicht creeren en beweging organiseren - niet alleen waardevol zijn in de logistiek. Deze skills zijn universeel: ze brengen rust, richting en resultaat, waar je ze ook toepast - thuis of op het werk.</p>
 								<p>Naarmate de wereld om ons heen voller wordt - met spullen, prikkels en verantwoordelijkheden - merk ik hoe belangrijk het is om overzicht en rust te bewaren. Ik heb zelf ervaren hoeveel verschil het maakt als je grip hebt op je ruimte, je tijd en je energie. Juist daarom heb ik ervoor gekozen om mijn ervaring in te zetten als professional organizer. Ik help particulieren en bedrijven om weer structuur en balans te vinden, zodat zij zich krachtiger, vrijer en lichter kunnen bewegen in hun dagelijks leven en werk.</p>
 								<p>Meer ruimte, minder rommel!</p>									
 								</article>
@@ -80,7 +86,7 @@
 								<p>1-op-1 coaching & begeleiding
 								<br>We starten met een korte intake en brengen jouw behoeften, frustraties en wensen in kaart. Tijdens onze sessies begeleid ik je persoonlijk bij het maken van keuzes, het loslaten van spullen en het (her)inrichten van je ruimte.</p>
 								<p>Organiseren van de gewenste ruimte(s)
-								<br>Samen pakken we fysieke ruimtes aan: van rommelhoek tot kledingkast, van keuken tot kantoor. Ik help je bij het sorteren, opruimen en logisch herstructureren, inclusief lichte schoonmaakwerkzaamheden waar nodig.</p>
+								<br>Samen pakken we fysieke ruimtes aan: van rommelhoek tot kledingkast, van keuken tot kantoor. Ik help je bij het sorteren, opruimen en logisch herstructureren, inclusief schoonmaken van ruimtes waar nodig.</p>
 								<p>Praktische tips & trucs voor blijvend resultaat
 								<br>Ik laat je niet achter met alleen een opgeruimde kamer. Je ontvangt toegankelijke methodes en inzichten zodat je leert hoe je grip houdt op je ruimte - ook in de toekomst.</p>
 								<p>Optioneel nazorgtraject
@@ -91,10 +97,8 @@
 								<br> - Meer ruimte in je leven
 								<br> - Minder rommel, minder stress
 								<br> - Meer energie voor wat echt belangrijk is</p>
-								<p>Klaar voor een frisse start?</p> 
-								<p> Uit eigen ervaring weet ik hoe krachtig een georganiseerde omgeving kan zijn. Meer ruimte in je huis betekent meer ruimte in je hoofd.
-								<br>Gun jezelf die vrijheid - ik help je graag op weg.</p>
-								<p>Neem vandaag nog contact op voor een kennismaking.</p>
+								<p>Klaar voor een frisse start?</p>
+								<p>Neem vandaag nog vrijblijvend contact op voor een kennismaking.</p>
 							</article>
 						
 						<!-- reviews -->
@@ -104,7 +108,7 @@
 								<p><h4></h4>
 									<blockquote><p>Bobby ruimt op!</p> 
 
-									<p>Poosje geleden heeft Bobby Hagestein mijn schuur opgeruimd. 
+									<p>Poosje geleden heeft Bobby mijn schuur opgeruimd. 
 									Het stond zo vol dat ik niet meer bij mijn werkbank en gereedschap kon…
 									Bobby pakt het heel systematisch aan en begint professioneel met goede vragen, ze luisterde goed!
 									Weggooien (ze brengt het zelf naar de Gemeentelijke Afval stort), hergebruiken en organiseren. 
@@ -436,6 +440,33 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+		
+		  <!-- Cookie consent script -->
+		  <script>
+		    function loadAnalytics() {
+		      const script = document.createElement('script');
+		      script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; // Vervang met jouw ID
+		      script.async = true;
+		      document.head.appendChild(script);
+		
+		      window.dataLayer = window.dataLayer || [];
+		      function gtag(){dataLayer.push(arguments);}
+		      gtag('js', new Date());
+		      gtag('config', 'G-XXXXXXXXXX'); // En hier ook
+		    }
+		
+		    function acceptCookies() {
+		      localStorage.setItem("cookieConsent", "true");
+		      document.getElementById("cookie-banner").style.display = "none";
+		      loadAnalytics();
+		    }
+		
+		    window.onload = function() {
+		      if (localStorage.getItem("cookieConsent") === "true") {
+		        loadAnalytics();
+		        document.getElementById("cookie-banner").style.display = "none";
+		      }
+		    };
+		  </script>
 	</body>
 </html>
